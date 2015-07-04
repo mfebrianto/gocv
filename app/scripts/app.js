@@ -30,7 +30,7 @@ angular
       })
       .when('/clients/new', {
         templateUrl: 'views/clients/new.html',
-        controller: 'NewClientCtrl'
+        controller: 'ClientCtrl'
       })
       .otherwise({
         redirectTo: '/'
