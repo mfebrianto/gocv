@@ -1,0 +1,18 @@
+<div ng-controller="AdminClientsCtrl">
+
+  <table>
+    <tr>
+      <th>first name</th>
+      <th>last name</th>
+      <th>date of birth</th>
+      <th>is male?</th>
+    </tr>
+    <tr ng-repeat="client in clients">
+      <td>{{ client.first_name }}</td>
+      <td>{{ client.last_name }}</td>
+      <td>{{ client.dob }}</td>
+      <td>{{ client.male_gender }}</td>
+    </tr>
+  </table>
+
+</div>

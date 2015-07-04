@@ -10,5 +10,10 @@ angular.module('gocvApp')
       return $http.post(baseUrl, client);
     }
 
-  return clientFactory;
+    clientFactory.getAllClients = function(){
+      return $http.get(baseUrl);
+    }
+
+
+    return clientFactory;
 });
