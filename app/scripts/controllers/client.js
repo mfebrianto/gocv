@@ -18,7 +18,13 @@ angular.module('gocvApp')
     }
 
     $scope.create = function(){
-      console.log(">>>>create"+$scope.client['first_name']);
+      ClientFactory.createClient($scope.client)
+        .success(function(){
+          console.log(">>>>>>client created");
+        })
+        .error(function(){
+          console.log(">>>>>>client creation failed");
+        })
     }
 
 

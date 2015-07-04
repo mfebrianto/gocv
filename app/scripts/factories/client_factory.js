@@ -3,7 +3,7 @@
 angular.module('gocvApp')
   .factory('ClientFactory', function($http) {
 
-    var baseUrl = "/my-account/clients"
+    var baseUrl = "/my-account/clients.json"
     var clientFactory = {};
 
     clientFactory.createClient = function(client){
