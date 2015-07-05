@@ -28,9 +28,13 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/client', {
+        templateUrl: 'views/clients/index.html',
+        controller: 'ClientIndexCtrl'
+      })
       .when('/clients/new', {
-        templateUrl: 'views/clients/new.html',
-        controller: 'ClientCtrl'
+        templateUrl: 'views/clients/edit.html',
+        controller: 'ClientEditCtrl'
       })
       .when('/admin/clients', {
         templateUrl: 'views/admin/clients/index.html',
