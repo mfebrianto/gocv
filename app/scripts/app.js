@@ -28,7 +28,7 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/client', {
+      .when('/client/:clientId', {
         templateUrl: 'views/clients/index.html',
         controller: 'ClientIndexCtrl'
       })

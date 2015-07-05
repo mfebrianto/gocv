@@ -3,17 +3,20 @@
 angular.module('gocvApp')
   .factory('ClientFactory', function($http) {
 
-    var baseUrl = "/my-account/clients.json"
+    var baseUrl = "/my-account/clients"
     var clientFactory = {};
 
     clientFactory.createClient = function(client){
-      return $http.post(baseUrl, client);
+      return $http.post(baseUrl+".json", client);
     }
 
     clientFactory.getAllClients = function(){
-      return $http.get(baseUrl);
+      return $http.get(baseUrl+".json");
     }
 
+    clientFactory.getClient = function(id){
+      return $http.get(baseUrl+"/"+id+".json");
+    }
 
     return clientFactory;
 });
