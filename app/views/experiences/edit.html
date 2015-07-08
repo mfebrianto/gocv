@@ -3,7 +3,7 @@
 <div ng-controller="ClientExperienceEditCtrl">
 
   <form ng-submit="create()">
-    <input type="text" id="client_id" ng-model="exp.client_id">
+    <input type="hidden" id="client_id" ng-model="exp.client_id">
     <div class="row">
       <div class="small-8 columns">
         <div class="row">
@@ -11,7 +11,7 @@
             <label for="right-label" class="right inline">Company</label>
           </div>
           <div class="small-9 columns">
-            <input type="text" id="right-label" placeholder="organization name" ng-model="exp.company">
+            <input type="text" id="right-label" placeholder="organization name" ng-model="exp.company_name">
           </div>
         </div>
       </div>

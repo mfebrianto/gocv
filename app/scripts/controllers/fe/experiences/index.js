@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientExperienceIndexCtrl', function ($location, $scope, ClientService, ExperienceFactory) {
+  .controller('ClientExperienceIndexCtrl', function ($scope, ClientService, ExperienceFactory, LocationFactory) {
 
     $scope.experience = {
       clientId : ''
@@ -16,18 +16,17 @@ angular.module('gocvApp')
 
     $scope.experiences = [];
 
-    $scope.fillTable = function(){
+    this.fillTable = function(){
       ExperienceFactory.getExperiencesBasedOnClientId(ClientService.getClientId())
+        .success(function(data){
+          $scope.experiences = data;
+        })
     }
 
-    $scope.fillTable();
+    this.fillTable();
 
-    $scope.test=function(clientId){
-      console.log('this is a test>>>>'+clientId);
-    }
-
-    $scope.changeView = function(id){
-      $location.path('/client/exp/'+id); // path not hash
+    $scope.changeView = function(clientId){
+      LocationFactory.goToClientExpEdit(clientId);
     }
 
   });
