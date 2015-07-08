@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientIndexCtrl', function (ClientFactory, $location, $routeParams, $scope) {
+  .controller('ClientIndexCtrl', function (ClientService, ClientFactory, $location, $routeParams, $scope) {
 
     $scope.client = {
       first_name: '',
@@ -16,6 +16,8 @@ angular.module('gocvApp')
       dob: '',
       male_gender: ''
     }
+
+    ClientService.setClientId($routeParams.clientId);
 
     $scope.getClient = function(){
       ClientFactory.getClient($routeParams.clientId)

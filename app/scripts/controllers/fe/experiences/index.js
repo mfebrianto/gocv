@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientExperienceIndexCtrl', function ($location, $scope, ExperienceFactory, $routeParams) {
+  .controller('ClientExperienceIndexCtrl', function ($location, $scope, ClientService, ExperienceFactory) {
 
     $scope.experience = {
       clientId : ''
@@ -17,14 +17,13 @@ angular.module('gocvApp')
     $scope.experiences = [];
 
     $scope.fillTable = function(){
-      console.log(">>>>>"+$scope.experience.clientId);
-      //ExperienceFactory.getExperiencesBasedOnClientId()
+      ExperienceFactory.getExperiencesBasedOnClientId(ClientService.getClientId())
     }
 
     $scope.fillTable();
 
-    $scope.init = function(clientId){
-      console.log(">>>>"+clientId);
+    $scope.test=function(clientId){
+      console.log('this is a test>>>>'+clientId);
     }
 
     $scope.changeView = function(id){
