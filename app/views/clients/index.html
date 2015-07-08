@@ -52,3 +52,26 @@
   </div>
 
 </div>
+
+<div ng-controller="ClientExperienceIndexCtrl">
+
+  <div ng-controller="ClientExperienceIndexCtrl">
+
+    <table>
+      <tr>
+        <th>company</th>
+        <th>position</th>
+        <th>start time</th>
+        <th>end time</th>
+      </tr>
+      <tr ng-repeat="exp in experiences">
+        <td>{{ exp.company }}</td>
+        <td>{{ exp.position }}</td>
+        <td>{{ exp.start_time }}</td>
+        <td>{{ exp.end_time }}</td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>
