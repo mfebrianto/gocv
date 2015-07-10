@@ -51,9 +51,7 @@
     </div>
   </div>
 
-
-  <div ng-controller="ClientExperienceIndexCtrl" ng-init="init('1')">
-
+  <div ng-controller="ClientExperienceIndexCtrl">
     <table>
       <tr>
         <th>company</th>
@@ -64,15 +62,14 @@
       <tr ng-repeat="exp in experiences">
         <td>{{ exp.company }}</td>
         <td>{{ exp.position }}</td>
-        <td>{{ exp.start_time }}</td>
-        <td>{{ exp.end_time }}</td>
+        <td>{{ exp.started_on }}</td>
+        <td>{{ exp.ended_on }}</td>
       </tr>
     </table>
 
-    <div ng-click="changeView('/admin/clients/exp')">
+    <div ng-click="changeView(client.id)">
       add new
     </div>
-
   </div>
 
 </div>
