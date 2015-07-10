@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientIndexCtrl', function (ClientFactory, $routeParams, $scope) {
+  .controller('ClientIndexCtrl', function (ClientFactory, $routeParams, $scope, $location) {
 
     $scope.client = {
       first_name: '',
@@ -26,6 +26,10 @@ angular.module('gocvApp')
         .error(function (error) {
           $scope.status = 'Error retrieving customers! ' + error.message;
         });
+    }
+
+    $scope.changeView = function(view){
+      $location.path(view);
     }
 
     $scope.getClient();

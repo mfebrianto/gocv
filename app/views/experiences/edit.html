@@ -1,0 +1,77 @@
+<p>Please add your new experience</p>
+
+<div ng-controller="ClientExperienceEditCtrl">
+
+  <form ng-submit="create()">
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">Company</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" id="right-label" placeholder="organization name" ng-model="exp.company">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">position</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" id="right-label" placeholder="your position" ng-model="exp.company">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">Start date</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="exp.start_date">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">end date</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="exp.end_date">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <input type="submit" value="Submit">
+          </div>
+          <div class="small-9 columns">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    $(function () {
+      window.prettyPrint && prettyPrint();
+      $('#dp1').fdatepicker({
+        format: 'mm-dd-yyyy',
+        disableDblClickSelection: true
+      });
+    });
+  </script>
+
+</div>
