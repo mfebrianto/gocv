@@ -8,8 +8,17 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientExperienceEditCtrl', function (ClientFactory, $routeParams, $scope) {
+  .controller('ClientExperienceEditCtrl', function (experienceFactory, $routeParams, $scope) {
 
-    $scope.experiences = [];
+    $scope.exp = {
+      client_id: $routeParams.clientId
+    };
+
+    $scope.create = function(){
+      experienceFactory.createExperience($scope.exp)
+        .success(function(){
+          console.log(">>>>>>experience created");
+        });
+    }
 
   });

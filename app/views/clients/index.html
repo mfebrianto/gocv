@@ -51,11 +51,8 @@
     </div>
   </div>
 
-</div>
 
-<div ng-controller="ClientExperienceIndexCtrl">
-
-  <div ng-controller="ClientExperienceIndexCtrl">
+  <div ng-controller="ClientExperienceIndexCtrl" ng-init="init('1')">
 
     <table>
       <tr>
@@ -72,10 +69,12 @@
       </tr>
     </table>
 
-  </div>
+    <div ng-click="changeView('/admin/clients/exp')">
+      add new
+    </div>
 
-  <div ng-click="changeView('/admin/clients/exp')">
-    add new
   </div>
 
 </div>
+
+

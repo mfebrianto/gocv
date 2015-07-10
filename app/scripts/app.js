@@ -40,7 +40,7 @@ angular
         templateUrl: 'views/admin/clients/index.html',
         controller: 'AdminClientsCtrl'
       })
-      .when('/admin/clients/exp', {
+      .when('/admin/clients/exp/:clientId', {
         templateUrl: 'views/experiences/edit.html',
         controller: 'ClientExperienceEditCtrl'
       })

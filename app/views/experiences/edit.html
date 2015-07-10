@@ -3,6 +3,7 @@
 <div ng-controller="ClientExperienceEditCtrl">
 
   <form ng-submit="create()">
+    <input type="hidden" id="client_id" ng-model="exp.client_id">
     <div class="row">
       <div class="small-8 columns">
         <div class="row">
@@ -34,7 +35,7 @@
             <label for="right-label" class="right inline">Start date</label>
           </div>
           <div class="small-9 columns">
-            <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="exp.start_date">
+            <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="exp.started_on">
           </div>
         </div>
       </div>
@@ -46,7 +47,7 @@
             <label for="right-label" class="right inline">end date</label>
           </div>
           <div class="small-9 columns">
-            <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="exp.end_date">
+            <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="exp.ended_on">
           </div>
         </div>
       </div>
