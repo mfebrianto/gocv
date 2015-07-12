@@ -51,7 +51,10 @@
     </div>
   </div>
 
-  <div ng-controller="ClientExperienceIndexCtrl">
+  <div ng-controller="ClientExperienceIndexCtrl" ng-init="init(client.id)">
+
+    <input type="text"  ng-model="experience.clientId"  ng-init="experience.clientId=client.id"/>
+
     <table>
       <tr>
         <th>company</th>

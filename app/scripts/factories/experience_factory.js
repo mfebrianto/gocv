@@ -14,6 +14,10 @@ angular.module('gocvApp')
       return $http.get(baseUrl+".json");
     }
 
+    experienceFactory.getExperiencesBasedOnClientId = function(id){
+      return $http.get(baseUrl+"/"+id+"/client.json");
+    }
+
     experienceFactory.getExperience = function(id){
       return $http.get(baseUrl+"/"+id+".json");
     }

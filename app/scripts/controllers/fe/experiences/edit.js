@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientExperienceEditCtrl', function ($routeParams, $scope) {
+  .controller('ClientExperienceEditCtrl', function ($routeParams, $scope, ExperienceFactory) {
 
     $scope.exp = {
       company: '',
@@ -17,11 +17,11 @@ angular.module('gocvApp')
       client_id: $routeParams.clientId
     };
 
-    //$scope.create = function(){
-    //  experienceFactory.createExperience($scope.exp)
-    //    .success(function(){
-    //      console.log(">>>>>>experience created");
-    //    });
-    //}
+    $scope.create = function(){
+      ExperienceFactory.createExperience($scope.exp)
+        .success(function(){
+          console.log(">>>>>>experience created");
+        });
+    }
 
   });
