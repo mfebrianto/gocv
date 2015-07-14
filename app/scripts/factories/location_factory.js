@@ -9,6 +9,10 @@ angular.module('gocvApp')
       $location.path('/client/'+clientId);
     }
 
+    locationFactory.goToClientEdit = function(clientId){
+      $location.path('/client/'+clientId);
+    }
+
     locationFactory.goToClientExpEdit = function(clientId){
       $location.path('/client/exp/'+clientId);
     }

@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientEditCtrl', function (ClientFactory, $scope) {
+  .controller('ClientEditCtrl', function (ClientFactory, ClientService, LocationFactory, $scope, $routeParams) {
 
     $scope.client = {
       first_name: '',
@@ -17,19 +17,24 @@ angular.module('gocvApp')
       gender: ''
     }
 
-    $scope.create = function(){
-      ClientFactory.createClient($scope.client)
-        .success(function(){
-          console.log(">>>>>>client created");
-        })
-        .error(function(){
-          console.log(">>>>>>client creation failed");
+    if ($routeParams.clientId != nil){
+      $scope.create = function(){
+        ClientFactory.createClient($scope.client)
+          .success(function(){
+            LocationFactory.goToClientIndex(ClientService.getClientId());
+          })
+      }
+    }
+    else{
+      ClientFactory.getClient($scope.client)
+        .success(function(data){
+          $scope.client = data;
         })
     }
 
-    $scope.getClient = function(client_id){
+  })
 
-    }
+
 
 
   });

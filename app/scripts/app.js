@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/clients/index.html',
         controller: 'ClientIndexCtrl'
       })
+      .when('/client/:clientId/edit', {
+        templateUrl: 'views/clients/edit.html',
+        controller: 'ClientEditCtrl'
+      })
       .when('/clients/new', {
         templateUrl: 'views/clients/edit.html',
         controller: 'ClientEditCtrl'

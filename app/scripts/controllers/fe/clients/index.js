@@ -30,6 +30,10 @@ angular.module('gocvApp')
         });
     }
 
+    $scope.editBasicData = function(){
+
+    };
+
     $scope.getClient();
 
   });
