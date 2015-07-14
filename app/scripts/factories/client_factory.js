@@ -10,6 +10,10 @@ angular.module('gocvApp')
       return $http.post(baseUrl+".json", client);
     }
 
+    clientFactory.updateClient = function(clientId, client){
+      return $http.put(baseUrl+"/"+clientId+".json", client);
+    }
+
     clientFactory.getAllClients = function(){
       return $http.get(baseUrl+".json");
     }

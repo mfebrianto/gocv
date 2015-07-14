@@ -2,7 +2,8 @@
 
 <div ng-controller="ClientEditCtrl">
 
-  <form ng-submit="create()">
+  <form ng-submit="update()">
+    <input type="hidden" id="client_id" ng-model="client.client_id">
     <div class="row">
       <div class="small-8 columns">
         <div class="row">
