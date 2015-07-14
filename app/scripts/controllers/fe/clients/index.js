@@ -8,7 +8,9 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientIndexCtrl', function (ClientService, ClientFactory, $location, $routeParams, $scope) {
+  .controller('ClientIndexCtrl', function (ClientService, ClientFactory,
+                                           LocationFactory, $location,
+                                           $routeParams, $scope) {
 
     $scope.client = {
       first_name: '',
@@ -30,8 +32,9 @@ angular.module('gocvApp')
         });
     }
 
-    $scope.editBasicData = function(){
-
+    $scope.editBasicData = function(clientId){
+      console.log(">>>>>>>>editBasicData");
+      LocationFactory.goToClientEdit(clientId);
     };
 
     $scope.getClient();

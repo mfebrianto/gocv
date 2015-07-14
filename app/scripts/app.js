@@ -37,8 +37,8 @@ angular
         controller: 'ClientEditCtrl'
       })
       .when('/clients/new', {
-        templateUrl: 'views/clients/edit.html',
-        controller: 'ClientEditCtrl'
+        templateUrl: 'views/clients/new.html',
+        controller: 'ClientNewCtrl'
       })
       .when('/admin/clients', {
         templateUrl: 'views/admin/clients/index.html',

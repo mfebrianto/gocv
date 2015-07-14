@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientEditCtrl', function (ClientFactory, ClientService,
+  .controller('ClientNewCtrl', function (ClientFactory, ClientService,
                                           LocationFactory, $scope) {
 
     $scope.client = {
@@ -19,9 +19,13 @@ angular.module('gocvApp')
     }
 
 
-    ClientFactory.getClient(ClientService.getClientId())
-      .success(function(data){
-        $scope.client = data;
-      })
+    $scope.create = function(){
+      ClientFactory.createClient($scope.client)
+        .success(function(){
+          LocationFactory.goToClientIndex(ClientService.getClientId());
+        })
+    }
+
+
 
   });

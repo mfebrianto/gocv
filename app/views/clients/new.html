@@ -1,0 +1,78 @@
+<p>This is new client view.</p>
+
+<div ng-controller="ClientNewCtrl">
+
+  <form ng-submit="create()">
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">First Name</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" id="right-label" placeholder="your first name" ng-model="client.first_name">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">Last Name</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" id="right-label" placeholder="yout last name" ng-model="client.last_name">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">Date of Birth</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="client.dob">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">Gender</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="radio" value="true" ng-model="client.male_gender" ><label>Male</label>
+            <input type="radio" value="false" ng-model="client.male_gender"><label>Female</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-8 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            <input type="submit" value="Submit">
+          </div>
+          <div class="small-9 columns">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    $(function () {
+      window.prettyPrint && prettyPrint();
+      $('#dp1').fdatepicker({
+        format: 'mm-dd-yyyy',
+        disableDblClickSelection: true
+      });
+    });
+  </script>
+
+</div>
