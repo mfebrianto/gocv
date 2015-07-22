@@ -12,7 +12,7 @@ angular.module('gocvApp')
                                                    ExperienceFactory, LocationFactory) {
 
     $scope.exp = {
-      company: '',
+      company_name: '',
       position: '',
       started_on: '',
       ended_on: '',

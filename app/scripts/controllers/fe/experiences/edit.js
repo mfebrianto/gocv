@@ -30,8 +30,14 @@ angular.module('gocvApp')
     this.loadChosenExp();
 
     $scope.update = function(){
-      console.log('>>>>update');
       ExperienceFactory.updateExperience($scope.exp.id, $scope.exp)
+        .success(function(){
+          LocationFactory.goToClientIndex($scope.exp.client_id);
+        });
+    }
+
+    $scope.delete = function(id){
+      ExperienceFactory.deleteExperience(id)
         .success(function(){
           LocationFactory.goToClientIndex($scope.exp.client_id);
         });
