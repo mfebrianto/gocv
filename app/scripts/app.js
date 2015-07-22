@@ -45,6 +45,10 @@ angular
         controller: 'AdminClientsCtrl'
       })
       .when('/client/exp/:clientId', {
+        templateUrl: 'views/experiences/new.html',
+        controller: 'ClientExperienceNewCtrl'
+      })
+      .when('/exp/:expId/edit', {
         templateUrl: 'views/experiences/edit.html',
         controller: 'ClientExperienceEditCtrl'
       })

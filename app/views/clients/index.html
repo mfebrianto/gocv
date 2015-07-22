@@ -51,9 +51,9 @@
     </div>
   </div>
 
-  <div ng-click="editBasicData(client.id)">
+  <a ng-click="editBasicData(client.id)"  class="button">
     edit basic data
-  </div>
+  </a>
 
   <div ng-controller="ClientExperienceIndexCtrl">
 
@@ -65,16 +65,14 @@
         <th>end time</th>
       </tr>
       <tr ng-repeat="exp in experiences">
-        <td>{{ exp.company_name }}</td>
+        <td> <a href="/#/exp/{{ exp.id }}/edit" >{{ exp.company_name }}</a></td>
         <td>{{ exp.position }}</td>
         <td>{{ exp.started_on }}</td>
         <td>{{ exp.ended_on }}</td>
       </tr>
     </table>
 
-    <div ng-click="changeView(client.id)">
-      add new
-    </div>
+    <a ng-click="changeView(client.id)" class="button">add new experience</a>
   </div>
 
 </div>

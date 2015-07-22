@@ -9,17 +9,29 @@
  */
 angular.module('gocvApp')
   .controller('ClientExperienceEditCtrl', function ($routeParams, $scope, $location,
-                                                    ExperienceFactory, LocationFactory) {
+                                                   ExperienceFactory, LocationFactory) {
 
     $scope.exp = {
       company: '',
+      position: '',
       started_on: '',
       ended_on: '',
-      client_id: $routeParams.clientId
+      client_id: '',
+      id: $routeParams.expId
     };
 
-    $scope.create = function(){
-      ExperienceFactory.createExperience($scope.exp)
+    this.loadChosenExp = function(){
+      ExperienceFactory.getExperience($routeParams.expId)
+        .success(function(data){
+          $scope.exp = data;
+        });
+    }
+
+    this.loadChosenExp();
+
+    $scope.update = function(){
+      console.log('>>>>update');
+      ExperienceFactory.updateExperience($scope.exp.id, $scope.exp)
         .success(function(){
           LocationFactory.goToClientIndex($scope.exp.client_id);
         });

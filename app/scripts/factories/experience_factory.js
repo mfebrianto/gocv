@@ -22,5 +22,9 @@ angular.module('gocvApp')
       return $http.get(baseUrl+"/"+id+".json");
     }
 
+    experienceFactory.updateExperience = function(expId, exp){
+      return $http.put(baseUrl+"/"+expId+".json", exp);
+    }
+
     return experienceFactory;
   });
