@@ -145,7 +145,7 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 600px) {
   .container {
     max-width: 730px;
   }
@@ -165,4 +165,71 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
+  .imgtopdiv {
+    min-height:100px;
+    height:200px;
+    max-height:200px;
+    width:100%;
+    margin:0px auto;
+    background-image:url(../images/headerbackground.png);
+    position:relative;
+    background-size:cover;
+    background-position:center
+
+  }
+
+  .logotophost {
+    height:100%;
+    width:300px;
+    margin:0px auto;
+  }
+
+  .stepshost{
+    min-width: 0px;
+    width:100%;
+    margin:0px auto;
+    height:auto;
+    position:relative
+  }
+
+  .stepdiv{
+    padding:10px 0 0 0;
+    border-bottom:1px solid #666666;
+    float:left;
+    width:100%;
+    font-family:'BebasFont';
+  }
+
+  .stepnostyle{
+    float:left;
+    width:96%;
+    margin:0 2%;
+    height:20px;
+    position:relative;
+    float:left;
+    font-size:20px;
+  }
+
+  .stepdescription{
+    float:left;
+    background-color:#fff;
+    width:100%;
+    margin:0 0 0 0;
+    border-left:none;
+    font-size:24px
+  }
+
+  .stepdescription div{
+    float:left;
+    margin:2%;
+    font-size:30px;
+  }
+
+  .stepdescription div img {
+    width:100%;
+  }
+
+
+
 }
