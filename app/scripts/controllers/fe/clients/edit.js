@@ -11,7 +11,6 @@ angular.module('gocvApp')
   .controller('ClientEditCtrl', function (ClientFactory, ClientService,
                                           LocationFactory, $scope) {
 
-
     ClientFactory.getClient(ClientService.getClientId())
       .success(function(data){
         $scope.client = data;
@@ -23,7 +22,5 @@ angular.module('gocvApp')
           LocationFactory.goToClientIndex(ClientService.getClientId());
         })
     }
-
-    common.datepicker.init();
 
   });

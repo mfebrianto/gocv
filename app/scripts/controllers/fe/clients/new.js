@@ -18,15 +18,12 @@ angular.module('gocvApp')
       gender: ''
     }
 
-
     $scope.create = function(){
       ClientFactory.createClient($scope.client)
         .success(function(){
           LocationFactory.goToClientIndex(ClientService.getClientId());
         })
     }
-
-    common.datepicker.init();
 
 
   });

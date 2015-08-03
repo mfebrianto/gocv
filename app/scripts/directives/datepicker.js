@@ -1,0 +1,6 @@
+angular.module('gocvApp')
+  .directive('datepicker', function() {
+  return function(scope, element, attrs) {
+    element.fdatepicker();
+  }
+});
