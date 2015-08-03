@@ -17,5 +17,9 @@ angular.module('gocvApp')
       $location.path('/client/exp/'+clientId);
     }
 
+    locationFactory.goToClientEduNew = function(clientId){
+      $location.path('/client/edu/'+clientId);
+    }
+
     return locationFactory;
   });

@@ -75,6 +75,31 @@
     <a ng-click="changeView(client.id)" class="button">add new experience</a>
   </div>
 
+  <div ng-controller="ClientEduIndexCtrl">
+
+    <table>
+      <tr>
+        <th>school name</th>
+        <th>city</th>
+        <th>country</th>
+        <th>start</th>
+        <th>end</th>
+        <th>faculty</th>
+      </tr>
+      <tr ng-repeat="edu in educations">
+        <td> <a href="/#/exp/{{ exp.id }}/edit" >{{ exp.company_name }}</a></td>
+        <td>{{ edu.school_name }}</td>
+        <td>{{ edu.city }}</td>
+        <td>{{ edu.country }}</td>
+        <td>{{ edu.start }}</td>
+        <td>{{ edu.end }}</td>
+        <td>{{ edu.faculty }}</td>
+      </tr>
+    </table>
+
+    <a ng-click="changeView(client.id)" class="button">add new education</a>
+  </div>
+
 </div>
 
 

@@ -52,6 +52,10 @@ angular
         templateUrl: 'views/experiences/edit.html',
         controller: 'ClientExperienceEditCtrl'
       })
+      .when('/client/edu/:clientId', {
+        templateUrl: 'views/educations/new.html',
+        controller: 'ClientEduNewCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
