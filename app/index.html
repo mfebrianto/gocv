@@ -111,6 +111,8 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/directives/datepicker.js"></script>
+    <!-- testingmasonrycode -->
+        <!--<script src="scripts/directives/masonry-docs.min.js"></script>-->
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/fe/clients/index.js"></script>
@@ -124,64 +126,17 @@
         <script src="scripts/factories/client_factory.js"></script>
         <script src="scripts/factories/experience_factory.js"></script>
         <script src="scripts/factories/location_factory.js"></script>
+        <script src="scripts/directives/navigation.js"></script>
+        <script src="scripts/directives/navigationmobile.js"></script>
         <!-- endbuild -->
 
   <!--mobile nav-->
-    <script>
-      (function () {
+<script>
 
-        // Create mobile element
-        var mobile = document.createElement('div');
-        mobile.className = 'nav-mobile';
-        document.querySelector('.nav').appendChild(mobile);
 
-        // hasClass
-        function hasClass(elem, className) {
-          return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-        }
 
-        // toggleClass
-        function toggleClass(elem, className) {
-          var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
-          if (hasClass(elem, className)) {
-            while (newClass.indexOf(' ' + className + ' ') >= 0) {
-              newClass = newClass.replace(' ' + className + ' ', ' ');
-            }
-            elem.className = newClass.replace(/^\s+|\s+$/g, '');
-          } else {
-            elem.className += ' ' + className;
-          }
-        }
 
-        // Mobile nav function
-        var mobileNav = document.querySelector('.nav-mobile');
-        var toggle = document.querySelector('.nav-list');
-        mobileNav.onclick = function () {
-          toggleClass(this, 'nav-mobile-open');
-          toggleClass(toggle, 'nav-active');
-        };
-      })();
-    </script>
-
-    <script>
-      $(function() {
-        var pull 		= $('#pull');
-        menu 		= $('nav ul');
-        menuHeight	= menu.height();
-
-        $(pull).on('click', function(e) {
-          e.preventDefault();
-          menu.slideToggle();
-        });
-
-        $(window).resize(function(){
-          var w = $(window).width();
-          if(w > 320 && menu.is(':hidden')) {
-            menu.removeAttr('style');
-          }
-        });
-      });
-    </script>
+</script>
 
 </body>
 </html>

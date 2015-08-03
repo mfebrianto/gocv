@@ -233,3 +233,26 @@ body {
 
 
 }
+
+
+button, .button {
+  -moz-appearance: none;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: 'BebasFont', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0px 0px 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #008CBA;
+  border-color: #007095;
+  color: #FFF;
+  transition: background-color 300ms ease-out 0s;
+}
