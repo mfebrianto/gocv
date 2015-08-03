@@ -26,8 +26,6 @@ angular.module('gocvApp')
         });
     }
 
-    $(document).ready(function(){
-      common.datepicker.init();
-    });
+    common.datepicker.init();
 
   });

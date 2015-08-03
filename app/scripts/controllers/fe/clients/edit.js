@@ -24,4 +24,6 @@ angular.module('gocvApp')
         })
     }
 
+    common.datepicker.init();
+
   });
