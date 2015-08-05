@@ -9,7 +9,7 @@
  */
 angular.module('gocvApp')
   .controller('ClientEduNewCtrl', function ($routeParams, $scope, $location,
-                                                   ExperienceFactory, LocationFactory) {
+                                                   EducationFactory, LocationFactory) {
 
     $scope.edu = {
       school_name: '',
@@ -21,11 +21,11 @@ angular.module('gocvApp')
       client_id: $routeParams.clientId
     };
 
-    //$scope.create = function(){
-    //  ExperienceFactory.createExperience($scope.exp)
-    //    .success(function () {
-    //      LocationFactory.goToClientIndex($scope.exp.client_id);
-    //    });
-    //}
+    $scope.create = function(){
+      EducationFactory.createEducation($scope.edu)
+        .success(function () {
+          LocationFactory.goToClientIndex($scope.edu.client_id);
+        });
+    }
 
   });
