@@ -18,9 +18,9 @@ angular.module('gocvApp')
       return $http.get(baseUrl+"/"+id+"/client.json");
     }
 
-    //experienceFactory.getExperience = function(id){
-    //  return $http.get(baseUrl+"/"+id+".json");
-    //}
+    educationFactory.getEducation = function(id){
+      return $http.get(baseUrl+"/"+id+".json");
+    }
     //
     //experienceFactory.deleteExperience = function(id){
     //  return $http.delete(baseUrl+"/"+id+".json");

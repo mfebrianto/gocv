@@ -56,6 +56,10 @@ angular
         templateUrl: 'views/educations/new.html',
         controller: 'ClientEduNewCtrl'
       })
+      .when('/edu/:eduId/edit', {
+        templateUrl: 'views/educations/edit.html',
+        controller: 'ClientEduEditCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

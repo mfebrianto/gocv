@@ -8,7 +8,7 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientEduIndexCtrl', function ($scope, ClientService, ExperienceFactory, LocationFactory) {
+  .controller('ClientEduIndexCtrl', function ($scope, ClientService, EducationFactory, LocationFactory) {
 
     $scope.edu = {
       clientId : ''
@@ -16,14 +16,14 @@ angular.module('gocvApp')
 
     $scope.educations = [];
 
-    //this.fillTable = function(){
-    //  ExperienceFactory.getExperiencesBasedOnClientId(ClientService.getClientId())
-    //    .success(function(data){
-    //      $scope.experiences = data;
-    //    })
-    //}
+    this.fillTable = function(){
+      EducationFactory.getEducationsBasedOnClientId(ClientService.getClientId())
+        .success(function(data){
+          $scope.educations = data;
+        })
+    }
 
-    //this.fillTable();
+    this.fillTable();
 
     $scope.changeView = function(clientId){
       LocationFactory.goToClientEduNew(clientId);
