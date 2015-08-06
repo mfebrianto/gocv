@@ -1,9 +1,9 @@
-<p>Please add your new education</p>
+<p>Detail of your education</p>
 
 <div ng-controller="ClientEduEditCtrl">
 
-  <form ng-submit="create()">
-    <input type="hidden" id="client_id" ng-model="edu.school_name">
+  <form ng-submit="update()">
+    <input type="hidden" id="client_id" ng-model="edu.client_id">
     <div class="row">
       <div class="small-8 columns">
         <div class="row">
@@ -47,7 +47,7 @@
             <label for="right-label" class="right inline">Start date</label>
           </div>
           <div class="small-9 columns">
-            <input type="text" class="span2" datepicker value="02/16/12" data-date-format="mm/dd/yy" id="dp1" ng-model="edu.start">
+            <input type="text" class="span2" datepicker data-date-format="mm/dd/yy" id="dp1" ng-model="edu.start">
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
             <label for="right-label" class="right inline">end date</label>
           </div>
           <div class="small-9 columns">
-            <input type="text" class="span2" datepicker value="02/16/12" data-date-format="mm/dd/yy" id="dp2" ng-model="edu.end">
+            <input type="text" class="span2" datepicker data-date-format="mm/dd/yy" id="dp2" ng-model="edu.end">
           </div>
         </div>
       </div>
@@ -80,9 +80,10 @@
       <div class="small-8 columns">
         <div class="row">
           <div class="small-3 columns">
-            <input type="submit" value="Submit">
+            <input type="submit" class="button" value="update">
           </div>
           <div class="small-9 columns">
+            <a ng-click="delete(edu.id)" class="button">delete</a>
           </div>
         </div>
       </div>

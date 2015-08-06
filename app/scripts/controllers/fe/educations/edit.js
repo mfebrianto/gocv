@@ -18,25 +18,26 @@ angular.module('gocvApp')
       start: '',
       end: '',
       faculty: '',
-      id: $routeParams.expId
+      client_id: '',
+      id: $routeParams.eduId
     };
 
     this.loadChosenEdu = function(){
-      EducationFactory.getEducation($routeParams.expId)
+      EducationFactory.getEducation($routeParams.eduId)
         .success(function(data){
           $scope.edu = data;
         });
     }
 
     this.loadChosenEdu();
-    //
-    //$scope.update = function(){
-    //  ExperienceFactory.updateExperience($scope.exp.id, $scope.exp)
-    //    .success(function(){
-    //      LocationFactory.goToClientIndex($scope.exp.client_id);
-    //    });
-    //}
-    //
+
+    $scope.update = function(){
+      EducationFactory.updateEducation($scope.edu.id, $scope.edu)
+        .success(function(){
+          LocationFactory.goToClientIndex($scope.edu.client_id);
+        });
+    }
+
     //$scope.delete = function(id){
     //  ExperienceFactory.deleteExperience(id)
     //    .success(function(){
