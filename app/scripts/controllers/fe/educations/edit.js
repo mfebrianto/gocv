@@ -40,11 +40,11 @@ angular.module('gocvApp')
         });
     }
 
-    //$scope.delete = function(id){
-    //  ExperienceFactory.deleteExperience(id)
-    //    .success(function(){
-    //      LocationFactory.goToClientIndex($scope.exp.client_id);
-    //    });
-    //}
+    $scope.delete = function(id){
+      EducationFactory.deleteEducation(id)
+        .success(function(){
+          LocationFactory.goToClientIndex(ClientService.getClientId());
+        });
+    }
 
   });

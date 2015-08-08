@@ -21,10 +21,10 @@ angular.module('gocvApp')
     educationFactory.getEducation = function(id){
       return $http.get(baseUrl+"/"+id+".json");
     }
-    //
-    //experienceFactory.deleteExperience = function(id){
-    //  return $http.delete(baseUrl+"/"+id+".json");
-    //}
+
+    educationFactory.deleteEducation = function(id){
+      return $http.delete(baseUrl+"/"+id+".json");
+    }
 
     educationFactory.updateEducation = function(eduId, edu){
       return $http.put(baseUrl+"/"+eduId+".json", edu);

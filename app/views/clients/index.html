@@ -67,8 +67,8 @@
       <tr ng-repeat="exp in experiences">
         <td> <a href="/#/exp/{{ exp.id }}/edit" >{{ exp.company_name }}</a></td>
         <td>{{ exp.position }}</td>
-        <td>{{ exp.started_on }}</td>
-        <td>{{ exp.ended_on }}</td>
+        <td>{{ exp.started_on | date:'dd/MM/yyyy' }}</td>
+        <td>{{ exp.ended_on | date:'dd/MM/yyyy' }}</td>
       </tr>
     </table>
 
