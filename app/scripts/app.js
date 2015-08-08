@@ -40,6 +40,11 @@ angular
         templateUrl: 'views/clients/new.html',
         controller: 'ClientNewCtrl'
       })
+      .when('/clients/new1', {
+        templateUrl: 'views/clients/new1.html',
+        controller: 'ClientNewCtrl1'
+      })
+
       .when('/admin/clients', {
         templateUrl: 'views/admin/clients/index.html',
         controller: 'AdminClientsCtrl'
