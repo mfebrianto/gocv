@@ -9,7 +9,7 @@
  */
 angular.module('gocvApp')
   .controller('ClientExperienceEditCtrl', function ($routeParams, $scope, $location,
-                                                   ExperienceFactory, LocationFactory) {
+                                                   ExperienceFactory, LocationFactory, ClientService) {
 
     $scope.exp = {
       company: '',
@@ -30,16 +30,19 @@ angular.module('gocvApp')
     this.loadChosenExp();
 
     $scope.update = function(){
+      delete $scope.exp['client_id'];
+      delete $scope.exp['created_at'];
+      delete $scope.exp['updated_at'];
       ExperienceFactory.updateExperience($scope.exp.id, $scope.exp)
         .success(function(){
-          LocationFactory.goToClientIndex($scope.exp.client_id);
+          LocationFactory.goToClientIndex(ClientService.getClientId());
         });
     }
 
     $scope.delete = function(id){
       ExperienceFactory.deleteExperience(id)
         .success(function(){
-          LocationFactory.goToClientIndex($scope.exp.client_id);
+          LocationFactory.goToClientIndex(ClientService.getClientId());
         });
     }
 
