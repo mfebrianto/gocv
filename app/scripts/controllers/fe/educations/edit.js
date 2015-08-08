@@ -8,8 +8,8 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('ClientEduEditCtrl', function ($routeParams, $scope, $location,
-                                                    EducationFactory, LocationFactory) {
+  .controller('ClientEduEditCtrl', function ($routeParams, $scope, $location, $filter,
+                                                    EducationFactory, LocationFactory, ClientService) {
 
     $scope.edu = {
       school_name: '',
@@ -18,7 +18,6 @@ angular.module('gocvApp')
       start: '',
       end: '',
       faculty: '',
-      client_id: '',
       id: $routeParams.eduId
     };
 
@@ -32,9 +31,12 @@ angular.module('gocvApp')
     this.loadChosenEdu();
 
     $scope.update = function(){
+      delete $scope.edu['client_id'];
+      delete $scope.edu['created_at'];
+      delete $scope.edu['updated_at'];
       EducationFactory.updateEducation($scope.edu.id, $scope.edu)
         .success(function(){
-          LocationFactory.goToClientIndex($scope.edu.client_id);
+          LocationFactory.goToClientIndex(ClientService.getClientId());
         });
     }
 

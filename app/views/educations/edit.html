@@ -3,7 +3,6 @@
 <div ng-controller="ClientEduEditCtrl">
 
   <form ng-submit="update()">
-    <input type="hidden" id="client_id" ng-model="edu.client_id">
     <div class="row">
       <div class="small-8 columns">
         <div class="row">
@@ -47,7 +46,7 @@
             <label for="right-label" class="right inline">Start date</label>
           </div>
           <div class="small-9 columns">
-            <input type="text" class="span2" datepicker data-date-format="mm/dd/yy" id="dp1" ng-model="edu.start">
+            <input type="text" class="span2" datepicker datetime="yyyy-MM-dd HH:mm:ss" id="dp1" ng-model="edu.start">
           </div>
         </div>
       </div>
@@ -59,7 +58,7 @@
             <label for="right-label" class="right inline">end date</label>
           </div>
           <div class="small-9 columns">
-            <input type="text" class="span2" datepicker data-date-format="mm/dd/yy" id="dp2" ng-model="edu.end">
+            <input type="text" class="span2" datepicker datetime="yyyy-MM-dd HH:mm:ss" id="dp2" ng-model="edu.end">
           </div>
         </div>
       </div>

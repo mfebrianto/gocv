@@ -90,8 +90,8 @@
         <td> <a href="/#/edu/{{ edu.id }}/edit" >{{ edu.school_name }}</a></td>
         <td>{{ edu.city }}</td>
         <td>{{ edu.country }}</td>
-        <td>{{ edu.start }}</td>
-        <td>{{ edu.end }}</td>
+        <td>{{ edu.start | date:'dd/MM/yyyy' }}</td>
+        <td>{{ edu.end | date:'dd/MM/yyyy'}}</td>
         <td>{{ edu.faculty }}</td>
       </tr>
     </table>
