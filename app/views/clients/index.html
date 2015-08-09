@@ -1,63 +1,55 @@
 <div ng-controller="ClientIndexCtrl">
 
-  <div>
+  <div style="padding:10px 0 0 0">
     <div class="row">
-      <div class="small-8 columns">
-        <div class="row">
-          <div class="small-3 columns">
-            <label for="right-label" class="right inline">First Name</label>
-          </div>
-          <div class="small-9 columns">
-            <label>{{ client.first_name }}</label>
-          </div>
-        </div>
+      <div class="small-12 medium-3 large-3 columns" style="text-align: center">
+        <img src="images/profile-img.png" />
       </div>
-    </div>
-    <div class="row">
-      <div class="small-8 columns">
+      <div class="small-12 medium-9 large-9 columns">
         <div class="row">
-          <div class="small-3 columns">
-            <label for="right-label" class="right inline">Last Name</label>
+          <div class="small-12 medium-6 large-6 columns">
+            <div class="small-5 columns">
+              <label for="right-label" class="left">First Name</label>
+            </div>
+            <div class="small-7 columns">
+              <label>{{ client.first_name }}</label>
+            </div>
+            <div class="small-5 columns">
+              <label for="right-label" class="left">Last Name</label>
+            </div>
+            <div class="small-7 columns ">
+              <label>{{ client.last_name }}</label>
+            </div>
           </div>
-          <div class="small-9 columns">
-            <label>{{ client.last_name }}</label>
+          <div class="small-12 medium-6 large-6 columns">
+            <div class="small-5 columns">
+              <label for="right-label" class="left">Date of Birth</label>
+            </div>
+            <div class="small-7 columns">
+              <label>{{ client.dob }}</label>
+            </div>
+            <div class="small-5 columns">
+              <label for="right-label" class="left">Gender</label>
+            </div>
+            <div class="small-7 columns">
+              <label>{{ client.male_gender }}</label>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-8 columns">
+       </div>
         <div class="row">
-          <div class="small-3 columns">
-            <label for="right-label" class="right inline">Date of Birth</label>
-          </div>
-          <div class="small-9 columns">
-            <label>{{ client.dob }}</label>
-          </div>
+          <a ng-click="editBasicData(client.id)"  class="button">
+            edit basic data
+          </a>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-8 columns">
-        <div class="row">
-          <div class="small-3 columns">
-            <label for="right-label" class="right inline">Gender</label>
-          </div>
-          <div class="small-9 columns">
-            <label>{{ client.male_gender }}</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <a ng-click="editBasicData(client.id)"  class="button">
-    edit basic data
-  </a>
+
+
+
 
   <div ng-controller="ClientExperienceIndexCtrl">
-
-    <table>
+    <div class="row">
+    <table class="responsive">
+      <tbody>
       <tr>
         <th>company</th>
         <th>position</th>
@@ -70,8 +62,9 @@
         <td>{{ exp.started_on | date:'dd/MM/yyyy' }}</td>
         <td>{{ exp.ended_on | date:'dd/MM/yyyy' }}</td>
       </tr>
+      </tbody>
     </table>
-
+    <div class="row">
     <a ng-click="changeView(client.id)" class="button">add new experience</a>
   </div>
 
@@ -101,4 +94,5 @@
 
 </div>
 
-
+    </div>
+  </div>

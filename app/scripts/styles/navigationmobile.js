@@ -4,7 +4,7 @@
 
 
 
-$(function () {
+//$(function () {
 
   // Create mobile element
   var mobile = document.createElement('div');
@@ -36,4 +36,4 @@ $(function () {
     toggleClass(this, 'nav-mobile-open');
     toggleClass(toggle, 'nav-active');
   };
-})();
+//})();

@@ -61,6 +61,10 @@ nav a#pull {
     display: none;
 }
 
+nav a:hover, nav a:focus {
+  color: #FFFFFF;
+}
+
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 600px) {
     nav {

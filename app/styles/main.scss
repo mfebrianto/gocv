@@ -6,7 +6,16 @@
   src: url(../font/BebasNeueRegular.ttf)
 }
 
+label{
+  padding:0px;
+  margin:0px;
+  text-align: left;
+}
 
+.normalizepad{
+  margin:0px;
+  padding:0px
+}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -230,7 +239,10 @@ body {
     width:100%;
   }
 
-
+  .row {
+    max-width: 80rem;
+    margin-bottom: 20px;
+  }
 
 }
 
