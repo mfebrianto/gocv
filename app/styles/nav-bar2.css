@@ -69,12 +69,12 @@ nav a:hover, nav a:focus {
 @media screen and (max-width: 600px) {
     nav {
         height: auto;
+      font-family: 'BebasFont';
     }
-    nav ul {
-        width: 100%;
-        display: block;
-        height: auto;
-    }
+  nav ul {
+    display: none;
+    height: auto;
+  }
     nav li {
         width: 100%;
       /*width: 50%;*/
@@ -90,6 +90,23 @@ nav a:hover, nav a:focus {
         width: 100%;
         text-indent: 25px;
     }
+  nav a#pull {
+    display: block;
+    background-color: #01596e;
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+  nav a#pull:after {
+    content:"";
+    background: url(../images/nav.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
 }
 
 /*Styles for screen 515px and lower*/
@@ -107,6 +124,7 @@ nav a:hover, nav a:focus {
         background-color: #01596e;
         width: 100%;
         position: relative;
+      float: left;
     }
     nav a#pull:after {
         content:"";

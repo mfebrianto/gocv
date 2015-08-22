@@ -1,45 +1,60 @@
 <div ng-controller="ClientIndexCtrl">
 
-  <div style="padding:10px 0 0 0">
+  <div class="maindiv">
     <div class="row">
-      <div class="small-12 medium-3 large-3 columns" style="text-align: center">
+      <div class="small-12 medium-3 large-3 columns profileimgplc" >
         <img src="images/profile-img.png" />
       </div>
       <div class="small-12 medium-9 large-9 columns">
         <div class="row">
           <div class="small-12 medium-6 large-6 columns">
-            <div class="small-5 columns">
-              <label for="right-label" class="left">First Name</label>
+            <div class="row">
+            <div class="formpack">
+              <div class="small-5 columns left">
+                <label for="right-label" class=" labelfont">First Name</label>
+              </div>
+              <div class="small-7 columns">
+                <label>{{ client.first_name }}</label>
+              </div>
             </div>
-            <div class="small-7 columns">
-              <label>{{ client.first_name }}</label>
             </div>
-            <div class="small-5 columns">
-              <label for="right-label" class="left">Last Name</label>
-            </div>
-            <div class="small-7 columns ">
-              <label>{{ client.last_name }}</label>
+            <div class="row">
+              <div class="formpack">
+              <div class="small-5 columns left">
+                <label for="right-label" class=" labelfont">Last Name</label>
+              </div>
+              <div class="small-7 columns ">
+                <label>{{ client.last_name }}</label>
+              </div>
+              </div>
             </div>
           </div>
           <div class="small-12 medium-6 large-6 columns">
-            <div class="small-5 columns">
-              <label for="right-label" class="left">Date of Birth</label>
+            <div class="row">
+              <div class="formpack">
+              <div class="small-5 columns left">
+                <label for="right-label" class=" labelfont">Date of Birth</label>
+              </div>
+              <div class="small-7 columns">
+                <label>{{ client.dob }}</label>
+              </div>
+              </div>
             </div>
-            <div class="small-7 columns">
-              <label>{{ client.dob }}</label>
-            </div>
-            <div class="small-5 columns">
-              <label for="right-label" class="left">Gender</label>
-            </div>
-            <div class="small-7 columns">
-              <label>{{ client.male_gender }}</label>
+            <div class="row">
+              <div class="formpack">
+              <div class="small-5 columns left">
+                <label for="right-label" class=" labelfont">Gender</label>
+              </div>
+              <div class="small-7 columns">
+                <label>{{ client.male_gender }}</label>
+              </div>
+              </div>
             </div>
           </div>
        </div>
         <div class="row">
-          <a ng-click="editBasicData(client.id)"  class="button">
-            edit basic data
-          </a>
+          <a ng-click="editBasicData(client.id)"  class="right button">
+            edit basic data</a>
         </div>
 
 

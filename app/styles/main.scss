@@ -27,6 +27,7 @@ label{
 body {
   padding: 0;
   background-color: #fff;
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -153,6 +154,34 @@ body {
   width:90%;
 }
 
+.maindiv {
+  padding:20px 10px
+}
+
+/* form */
+.formpack {
+  background-color:#f8f7f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:3px;
+  margin:3px;
+  margin-top:0px;
+  margin-right:0px;
+  height:30px;
+
+}
+
+.labelfont {
+  font-family: 'BebasFont', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.9em;
+  margin:2px 0 0 0;
+}
+
+.profileimgplc {
+ text-align: center;margin:0 0 10px 0;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (max-width: 600px) {
   .container {
@@ -249,7 +278,7 @@ body {
 
 button, .button {
   -moz-appearance: none;
-  border-radius: 10px;
+  border-radius: 8px;
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
@@ -261,10 +290,14 @@ button, .button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  padding: 10px;
+  padding: 5px 10px;
   font-size: 1rem;
-  background-color: #008CBA;
-  border-color: #007095;
+  background-color: #d9a796;
+  /*border-color: #007095;*/
   color: #FFF;
   transition: background-color 300ms ease-out 0s;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #6d544b;
 }
