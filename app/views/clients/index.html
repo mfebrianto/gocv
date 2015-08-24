@@ -7,7 +7,7 @@
       </div>
       <div class="small-12 medium-9 large-9 columns">
         <div class="row">
-          <div class="small-12 medium-6 large-6 columns">
+          <div class="small-12 medium-12 large-6 columns">
             <div class="row">
             <div class="formpack">
               <div class="small-5 columns left">
@@ -29,7 +29,7 @@
               </div>
             </div>
           </div>
-          <div class="small-12 medium-6 large-6 columns">
+          <div class="small-12 medium-12 large-6 columns">
             <div class="row">
               <div class="formpack">
               <div class="small-5 columns left">
@@ -52,30 +52,34 @@
             </div>
           </div>
        </div>
-        <div class="row">
+        <div class="row buttonrow" >
+          <h2>
+          <span>
           <a ng-click="editBasicData(client.id)"  class="right button">
-            edit basic data</a>
+            edit basic data</a></span></h2>
         </div>
 
 
 
 
 
-  <div ng-controller="ClientExperienceIndexCtrl">
-    <div class="row">
-    <table class="responsive">
-      <tbody>
+  <div ng-controller="ClientExperienceIndexCtrl" class="row" >
+    <div style="width:100%" id="no-more-tables">
+    <table>
+      <thead class=" labelfont">
       <tr>
         <th>company</th>
         <th>position</th>
         <th>start time</th>
         <th>end time</th>
       </tr>
-      <tr ng-repeat="exp in experiences">
-        <td> <a href="/#/exp/{{ exp.id }}/edit" >{{ exp.company_name }}</a></td>
-        <td>{{ exp.position }}</td>
-        <td>{{ exp.started_on | date:'dd/MM/yyyy' }}</td>
-        <td>{{ exp.ended_on | date:'dd/MM/yyyy' }}</td>
+      </thead>
+      <tbody ng-repeat="exp in experiences">
+      <tr>
+        <td data-title="company"> <a href="/#/exp/{{ exp.id }}/edit" >{{ exp.company_name }}</a></td>
+        <td data-title="position">{{ exp.position }}</td>
+        <td data-title="start time">{{ exp.started_on | date:'dd/MM/yyyy' }}</td>
+        <td data-title="end time">{{ exp.ended_on | date:'dd/MM/yyyy' }}</td>
       </tr>
       </tbody>
     </table>
