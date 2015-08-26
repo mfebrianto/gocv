@@ -36,15 +36,10 @@ angular
         templateUrl: 'views/clients/edit.html',
         controller: 'ClientEditCtrl'
       })
-      .when('/clients/new', {
-        templateUrl: 'views/clients/new.html',
-        controller: 'ClientNewCtrl'
+      .when('/clients/scratch', {
+        templateUrl: 'views/clients/index.html',
+        controller: 'ClientIndexCtrl'
       })
-      .when('/clients/new1', {
-        templateUrl: 'views/clients/new1.html',
-        controller: 'ClientNewCtrl1'
-      })
-
       .when('/admin/clients', {
         templateUrl: 'views/admin/clients/index.html',
         controller: 'AdminClientsCtrl'

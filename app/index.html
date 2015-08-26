@@ -8,11 +8,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-    <link rel="stylesheet" href="bower_components/foundation-datepicker/css/foundation-datepicker.css" />
+    <link rel='stylesheet' href='bower_components/foundation/css/foundation.css' />
+    <link rel='stylesheet' href='bower_components/foundation-datepicker/css/foundation-datepicker.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/file_input.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/nav-bar2.css">
@@ -50,7 +51,7 @@
     <nav class="clearfix">
       <ul class="nav">
         <li><a href="#">Home</a></li>
-        <li><a href="#">How-to</a></li>
+        <li><a href="#/clients/scratch">How-to</a></li>
         <li><a href="#">Icons</a></li>
         <li><a href="#">Design</a></li>
         <li><a href="#">Web 2.0</a></li>
@@ -114,12 +115,12 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/directives/datepicker.js"></script>
+        <script src="scripts/directives/fileSelect.js"></script>
     <!-- testingmasonrycode -->
         <!--<script src="scripts/directives/masonry-docs.min.js"></script>-->
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/fe/clients/index.js"></script>
-        <script src="scripts/controllers/fe/clients/new.js"></script>
         <script src="scripts/controllers/fe/clients/edit.js"></script>
         <script src="scripts/controllers/fe/experiences/index.js"></script>
         <script src="scripts/controllers/fe/experiences/edit.js"></script>
@@ -133,6 +134,7 @@
         <script src="scripts/factories/education_factory.js"></script>
         <script src="scripts/factories/experience_factory.js"></script>
         <script src="scripts/factories/location_factory.js"></script>
+        <script src="scripts/factories/preview.js"></script>
         <script src="scripts/styles/navigation.js"></script>
         <script src="scripts/styles/navigationmobile.js"></script>
 

@@ -10,7 +10,7 @@
 angular.module('gocvApp')
   .controller('ClientIndexCtrl', function (ClientService, ClientFactory,
                                            LocationFactory, $location,
-                                           $routeParams, $scope) {
+                                           $routeParams, $scope, fileReader) {
 
     $scope.client = {
       first_name: '',
@@ -18,6 +18,16 @@ angular.module('gocvApp')
       dob: '',
       male_gender: ''
     }
+
+    $scope.imageSrc = "images/profile-img.png";
+
+    $scope.getFile = function () {
+      $scope.progress = 0;
+      fileReader.readAsDataUrl($scope.file, $scope)
+        .then(function(result) {
+          $scope.imageSrc = result;
+        });
+    };
 
     ClientService.setClientId($routeParams.clientId);
 

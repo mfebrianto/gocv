@@ -3,8 +3,15 @@
   <div class="maindiv">
     <div class="row">
       <div class="small-12 medium-3 large-3 columns profileimgplc" >
-        <img src="images/profile-img.png" />
+        <img ng-src="{{imageSrc}}" />
+        <div class="row">
+          <div class="fileUpload button">
+            <span>update photo</span>
+            <input type="file" class="upload" ng-file-select="onFileSelect($files)" />
+          </div>
+        </div>
       </div>
+
       <div class="small-12 medium-9 large-9 columns">
         <div class="row">
           <div class="small-12 medium-12 large-6 columns">
