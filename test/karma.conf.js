@@ -38,6 +38,7 @@ module.exports = function(config) {
       'bower_components/foundation/js/foundation.js',
       'bower_components/foundation-datepicker/js/foundation-datepicker.js',
       'bower_components/angular-datetime/dist/datetime.js',
+      'bower_components/ng-file-upload/ng-file-upload.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

@@ -5,10 +5,11 @@
       <div class="small-12 medium-3 large-3 columns profileimgplc" >
         <img ng-src="{{imageSrc}}" />
         <div class="row">
-          <div class="fileUpload button">
-            <span>update photo</span>
-            <input type="file" class="upload" ng-file-select="onFileSelect($files)" />
-          </div>
+          <!--<div class="fileUpload button">-->
+            <!--<span>update photo</span>-->
+            <!--<input type="file" class="upload" ng-file-select="onFileSelect($files)" />-->
+          <!--</div>-->
+          <div class="button" ngf-select="upload($file)">Upload on file select</div>
         </div>
       </div>
 

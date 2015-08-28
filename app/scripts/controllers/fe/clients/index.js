@@ -40,7 +40,23 @@ angular.module('gocvApp')
         .error(function (error) {
           $scope.status = 'Error retrieving customers! ' + error.message;
         });
-    }
+    };
+
+    // upload on file select or drop
+    $scope.upload = function (file) {
+      Upload.upload({
+        url: 'upload/url',
+        fields: {'username': $scope.username},
+        file: file
+      }).progress(function (evt) {
+        var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+        console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+      }).success(function (data, status, headers, config) {
+        console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
+      }).error(function (data, status, headers, config) {
+        console.log('error status: ' + status);
+      })
+    };
 
     $scope.editBasicData = function(clientId){
       console.log(">>>>>>>>editBasicData");
