@@ -10,7 +10,7 @@
 angular.module('gocvApp')
   .controller('ClientIndexCtrl', function (ClientService, ClientFactory,
                                            LocationFactory, $location,
-                                           $routeParams, $scope, fileReader) {
+                                           $routeParams, $scope, fileReader, Upload) {
 
     $scope.client = {
       first_name: '',
