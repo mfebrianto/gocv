@@ -45,8 +45,7 @@ angular.module('gocvApp')
     // upload on file select or drop
     $scope.upload = function (file) {
       Upload.upload({
-        url: 'upload/url',
-        fields: {'username': $scope.username},
+        url: 'my-account/clients/upload_photo.json',
         file: file
       }).progress(function (evt) {
         var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
