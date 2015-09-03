@@ -8,10 +8,14 @@
  * Controller of the gocvApp
  */
 angular.module('gocvApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $log, ScratchFactory) {
+
+    $scope.newClientFromScratch = function(){
+      //$log.debug('Hello Debug!');
+      ScratchFactory.new ()
+        .success(function(data){
+          $log.debug(data);
+        })
+    };
+
   });
