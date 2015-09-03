@@ -61,6 +61,10 @@ angular
         templateUrl: 'views/educations/edit.html',
         controller: 'ClientEduEditCtrl'
       })
+      .when('/scratch/:id', {
+        templateUrl: 'views/scratch.html',
+        controller: 'scratchCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

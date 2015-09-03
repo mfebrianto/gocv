@@ -5,10 +5,6 @@
       <div class="small-12 medium-3 large-3 columns profileimgplc" >
         <img ng-src="{{imageSrc}}" />
         <div class="row">
-          <!--<div class="fileUpload button">-->
-          <!--<span>update photo</span>-->
-          <!--<input type="file" class="upload" ng-file-select="onFileSelect($files)" />-->
-          <!--</div>-->
           <div class="button" ngf-select="upload($file)">Upload on file select</div>
         </div>
       </div>
@@ -66,13 +62,12 @@
           <a ng-click="editBasicData(client.id)"  class="right button">
             edit basic data</a></span></h2>
         </div>
+
+
+        <div ng-include src="'/views/experiences/index.html'"></div>
+        <div ng-include src="'/views/educations/index.html'"></div>
+
       </div>
-
-
-      <div ng-include src="'/views/experiences/index.html'"></div>
-      <div ng-include src="'/views/educations/index.html'"></div>
-
-
     </div>
   </div>
 </div>

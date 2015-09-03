@@ -1,0 +1,26 @@
+<div ng-controller="ClientExperienceIndexCtrl" class="row" >
+  <div style="width:100%" id="no-more-tables">
+    <table>
+      <thead class=" labelfont">
+      <tr>
+        <th>company</th>
+        <th>position</th>
+        <th>start time</th>
+        <th>end time</th>
+      </tr>
+      </thead>
+      <tbody ng-repeat="exp in experiences">
+      <tr>
+        <td data-title="company"> <a href="/#/exp/{{ exp.id }}/edit" >{{ exp.company_name }}</a></td>
+        <td data-title="position">{{ exp.position }}</td>
+        <td data-title="start time">{{ exp.started_on | date:'dd/MM/yyyy' }}</td>
+        <td data-title="end time">{{ exp.ended_on | date:'dd/MM/yyyy' }}</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <a ng-click="changeView(client.id)" class="button">add new experience</a>
+    </div>
+
+  </div>
+</div>

@@ -21,5 +21,9 @@ angular.module('gocvApp')
       $location.path('/client/edu/'+clientId);
     }
 
+    locationFactory.notFound = function(){
+      window.location = $location.protocol() + '://'+ $location.host() +'/404.html'
+    }
+
     return locationFactory;
   });
