@@ -46,7 +46,7 @@ angular.module('gocvApp')
     $scope.upload = function (file) {
       Upload.upload({
         url: 'my-account/clients/upload_photo.json',
-        fields: {'session_id': '1'},
+        fields: {'session_id': $cookies.get('session')},
         file: file
       }).progress(function (evt) {
         var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
